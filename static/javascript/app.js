@@ -22,7 +22,7 @@ function handleClick() {
     let date = d3.select('#datetime').property('value');        // D3 syntax is closely linked to html; select first element (selector string) with id='datetime' in html tags, chain property() to extract info in datetime and store in date
     let filteredData = tableData;                               // default filter has none applied, so all data is returned to begin with
     if (date) {
-        filteredData = filteredData.filter(row ==> row.datetime === date);      // show only rows with date corresponding to the date filter created above. === means strict equality (type and value check)
+        filteredData = filteredData.filter(row => row.datetime === date);      // show only rows with date corresponding to the date filter created above. === means strict equality (type and value check)
     buildTable(filteredData);
     }
 }
